@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -O3 -DNDEBUG -O3 -march=native -s   -shared -Wl,-soname,libMultiDim.so -o libMultiDim.so CMakeFiles/libMultiDim.dir/src/FINT.c.o CMakeFiles/libMultiDim.dir/src/TMultiDim.cc.o CMakeFiles/libMultiDim.dir/src/MultiDimDict.cc.o -L/opt/cern/root/lib/root 

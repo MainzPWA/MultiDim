@@ -1,0 +1,6 @@
+#!/bin/bash
+export ROOT_INC=$ROOTSYS/include/root
+
+$ROOTSYS/bin/rootcint -f $(pwd)/src/MultiDimDict.cc -c $(pwd)/src/TMultiDim.h
+gcc src/*.cc src/*.c -shared -fPIC -w -O3 -s -march=native -rdynamic -lstdc++ -lm -I$ROOT_INC -o build/libMultiDim.so
+$ROOTSYS/bin/rlibmap -o build/libMultiDim.so.rootmap -l build/libMultiDim.so -c src/MultiDimLinkDef.h
